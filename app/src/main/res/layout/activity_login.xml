@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vector_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/kurale"
+        android:text="Sign-in"
+        android:textColor="@color/white"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/loginUserGmail"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:padding="18dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/fieldbg"
+        android:fontFamily="@font/kurale"
+        android:hint="Enter your Gmail"
+        android:inputType="text"
+        android:shadowColor="@color/black"
+        android:shadowDy="5"
+        android:textColor="@color/black"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInText"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/loginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/fieldbg"
+        android:elevation="10dp"
+        android:fontFamily="@font/kurale"
+        android:hint="Enter your Password"
+        android:inputType="textPassword"
+        android:longClickable="false"
+        android:padding="18dp"
+        android:shadowColor="@color/black"
+        android:shadowDy="5"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/loginUserGmail"
+        app:layout_constraintStart_toStartOf="@+id/loginUserGmail"
+        app:layout_constraintTop_toBottomOf="@id/loginUserGmail"
+        android:textColorHint="@color/black"/>
+
+    <TextView
+        android:id="@+id/forgotText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/kurale"
+        android:text="Do you forgot your password ?"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/loginPassword"
+        app:layout_constraintTop_toBottomOf="@id/loginPassword"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/buttonbg"
+        android:text="Sign-in"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/signUpButton"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signUpButton"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:background="@drawable/buttonbg"
+        android:backgroundTint="#EF0808"
+        android:text="Sign-up"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/loginButton"
+        app:layout_constraintTop_toTopOf="@+id/loginButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

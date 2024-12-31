@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "780889203413",
+    "project_id": "auth-cc6de",
+    "storage_bucket": "auth-cc6de.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780889203413:android:a473721a3f7c069ebe785c",
+        "android_client_info": {
+          "package_name": "com.example.loginandsignup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0WjMaBjD9-x6joK4NntSpbFT5N71Dp_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
