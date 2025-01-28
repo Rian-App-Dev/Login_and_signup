@@ -5,21 +5,29 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.loginandsignup.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class LoginActivity : AppCompatActivity() {
     private val binding : ActivityLoginBinding by lazy{
         ActivityLoginBinding.inflate(layoutInflater)
     }
     private lateinit var auth: FirebaseAuth
+    override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        if (currentUser != null){
+            val intent = Intent(this,HomeActivity::class.java)
+            startActivity(intent)
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
         auth = FirebaseAuth.getInstance()
+
         binding.signUpButton.setOnClickListener{
             val intent = Intent(this,SignupActivity::class.java)
             startActivity(intent)
